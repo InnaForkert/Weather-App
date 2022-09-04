@@ -24,17 +24,17 @@ function showTemp(response) {
   document.getElementById("C").innerHTML = descr.innerHTML = "°C";
   document.getElementById("|").innerHTML = descr.innerHTML = "|";
   document.getElementById("F").innerHTML = descr.innerHTML = "°F";
-  descr.innerHTML = response.data.weather[0].description;
+  descr.innerHTML = response.data.weather[0].main;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  wind.innerHTML = `Wind speed: ${response.data.wind.speed} m/s`;
+  wind.innerHTML = `Wind speed: ${Math.round(response.data.wind.speed)} m/s`;
 }
 
 function showTempLoc(response) {
   temp.innerHTML = `${Math.round(response.data.main.temp)}°C`;
   city.innerHTML = response.data.name;
-  descr.innerHTML = response.data.weather[0].description;
+  descr.innerHTML = response.data.weather[0].main;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  wind.innerHTML = `Wind speed: ${response.data.wind.speed} m/s`;
+  wind.innerHTML = `Wind speed: ${Math.round(response.data.wind.speed)} m/s`;
 }
 
 const key = "6d7419b80173a006c3181ed3637d4936";
