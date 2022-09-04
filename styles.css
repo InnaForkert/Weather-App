@@ -41,6 +41,8 @@ p {
   background-color: aliceblue;
   opacity: 1;
   margin: 20px;
+  max-width: 1000px;
+  margin-bottom: 0;
 }
 
 #myVideo {
@@ -75,4 +77,9 @@ p {
 
 .search-form {
   display: inline;
+}
+
+a {
+  margin-left: 30px;
+  margin-top: 0;
 }
