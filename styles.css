@@ -100,3 +100,34 @@ p {
   font-size: 45px;
   margin-left: 10px;
 }
+
+.weather-forecast {
+  padding: 10px;
+  text-align: center;
+}
+
+.weather-forecast:hover {
+}
+
+.time-forecast {
+  background-color: rgba(249, 89, 89, 0.2);
+  border-radius: 4px;
+}
+
+.icon-forecast {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.max {
+  color: #f95959;
+}
+
+.min {
+  color: rgba(69, 93, 122, 0.7);
+}
+
+.shadow-hov:hover {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  border-radius: 8px;
+}

@@ -19,7 +19,7 @@ if (minutes > 9) {
 }
 
 function showTemp(response) {
-  temp.innerHTML = ` ${Math.round(response.data.main.temp)}`;
+  temp.innerHTML = `${Math.round(response.data.main.temp)}`;
   tempInCelc = response.data.main.temp;
   descr.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
