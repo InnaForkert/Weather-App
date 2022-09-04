@@ -13,7 +13,7 @@ p {
   color: #f95959;
   background-color: #455d7a;
   border-radius: 35px;
-  padding: 12px;
+  padding: 10px;
   border: none;
   box-shadow: 2px 2px 4px #102919;
   transition: ease-in-out;
@@ -85,6 +85,15 @@ p {
 
 .descr:first-letter {
   text-transform: capitalize;
+}
+
+.active {
+  color: #f95959;
+  text-decoration: underline;
+}
+
+.active:hover {
+  cursor: pointer;
 }
 
 #icon {

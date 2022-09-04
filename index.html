@@ -18,7 +18,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
@@ -28,6 +27,7 @@
       src="https://kit.fontawesome.com/912f1a8437.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="app">
@@ -57,10 +57,10 @@
       </div>
       <div class="row">
         <div class="col">
-          <img src="" class="" id="icon"></img><span class="temp"></span
-          ><span id="C" class="up"></span></span
-          ><span id="|" class="up"></span></span
-          ><span id="F" class="up"></span>
+          <img src="" class="" id="icon"></img><span class="temp" id="temp"></span>
+          <span id="C" class="up">°C</span>
+          <span id="|" class="up"> | </span>
+          <span id="F" class="up active">°F</span>
         </div>
         <div class="col">
           <p class="humidity"></p>
@@ -73,5 +73,6 @@
       by Inna Forkert
     </div>
     <script src="/app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </body>
 </html>
