@@ -92,8 +92,6 @@ function convertToF(event) {
       (parseInt(maxs[a].innerHTML) * 9) / 5 + 32
     )}° `;
   }
-  F.removeEventListener("click", convertToF);
-  C.addEventListener("click", convertToC);
   let mins = document.getElementsByClassName("min");
   for (let a = 0; a < mins.length; a += 1) {
     mins[a].innerHTML = `${Math.round(
@@ -115,8 +113,6 @@ function convertToC(event) {
       ((parseInt(maxs[a].innerHTML) - 32) * 5) / 9
     )}° `;
   }
-  F.removeEventListener("click", convertToF);
-  C.addEventListener("click", convertToC);
   let mins = document.getElementsByClassName("min");
   for (let a = 0; a < mins.length; a += 1) {
     mins[a].innerHTML = `${Math.round(
