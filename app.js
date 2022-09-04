@@ -19,8 +19,11 @@ if (minutes > 9) {
 }
 
 function showTemp(response) {
-  temp.innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  temp.innerHTML = ` ${Math.round(response.data.main.temp)}`;
   document.getElementById("icon").className += "fa-solid fa-sun";
+  document.getElementById("C").innerHTML = descr.innerHTML = "°C";
+  document.getElementById("|").innerHTML = descr.innerHTML = "|";
+  document.getElementById("F").innerHTML = descr.innerHTML = "°F";
   descr.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind speed: ${response.data.wind.speed} m/s`;
@@ -64,5 +67,5 @@ function getLoc() {
   navigator.geolocation.getCurrentPosition(showLoc);
 }
 
-const locationButton = document.querySelector(".location-button");
+const locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", getLoc);

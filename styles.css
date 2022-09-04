@@ -1,7 +1,10 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 p {
   font-size: large;
-  margin-left: 20px;
-  line-height: 20px;
+  line-height: 1;
 }
 
 .submit-button {
@@ -32,25 +35,16 @@ p {
 
 .search-form {
   font-size: large;
-  padding: 20px 20px;
 }
 
 .app {
-  border: solid 2px black;
+  border: solid 2px #455d7a;
   border-radius: 20px;
   background-color: aliceblue;
-  opacity: 1;
-  margin: 10px auto;
+  margin: 20px auto 0 auto;
   max-width: 800px;
   width: 80%;
-}
-
-#myVideo {
-  opacity: 0.2;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
+  padding: 10px 20px;
 }
 
 .city {
@@ -64,18 +58,13 @@ p {
 .wind,
 .C {
   font-size: 15px;
-  line-height: 12px;
+  line-height: 10px;
 }
 
 .temp {
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 40px;
-  margin-bottom: 25px;
-}
-
-.location-button {
-  display: inline;
 }
 
 .search-form {
@@ -85,7 +74,13 @@ p {
 .link {
   display: block;
   margin: 0 auto;
-  width: 250px;
+  max-width: 780px;
+  width: 80%;
+}
+
+.up {
+  position: relative;
+  bottom: 42%;
 }
 
 #icon {
