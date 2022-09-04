@@ -36,6 +36,8 @@ function showTemp(response) {
   city.innerHTML = response.data.name;
   C.classList.remove("active");
   F.classList.add("active");
+  const forecastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=a43564c91a6c605aeb564c9ed02e3858&units=metric`;
+  axios.get(forecastUrl).then(displayForecast);
 }
 
 const key = "6d7419b80173a006c3181ed3637d4936";
@@ -95,3 +97,39 @@ function convertToC(event) {
 
 F.addEventListener("click", convertToF);
 C.addEventListener("click", convertToC);
+
+function formatDay(timestamp) {
+  let dateForecast = new Date(timestamp * 1000);
+  let day = days[dateForecast.getDay()].slice(0, 3);
+  return day;
+}
+
+function displayForecast(response) {
+  const forecastElement = document.querySelector("#forecast");
+  console.log(response.data.daily);
+  const forecast = response.data.daily;
+  let forecastHTML = `<div class="row">`;
+  forecast.slice(0, -2).forEach(function (forecastDay) {
+    forecastHTML += `<div class="col-2 shadow-hov">
+          <div class="day-forecast">${formatDay(forecastDay.dt)}</div>
+          <div class="icon-forecast-div">
+            <img
+              src="http://openweathermap.org/img/wn/${
+                forecastDay.weather[0].icon
+              }@2x.png"
+              class="icon-forecast"
+              alt=""
+            />
+          </div>
+          <div class="temp-forecast">
+            <span class="max">${Math.round(
+              forecastDay.temp.max
+            )}° </span><span class="min">${Math.round(
+      forecastDay.temp.min
+    )}°</span>
+          </div>
+        </div>`;
+  });
+  forecastHTML += `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
