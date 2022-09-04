@@ -86,6 +86,22 @@ function convertToF(event) {
   document.getElementById("temp").innerHTML = Math.round(tempInFahr);
   F.classList.remove("active");
   C.classList.add("active");
+  let maxs = document.getElementsByClassName("max");
+  for (let a = 0; a < maxs.length; a += 1) {
+    maxs[a].innerHTML = `${Math.round(
+      (parseInt(maxs[a].innerHTML) * 9) / 5 + 32
+    )}° `;
+  }
+  F.removeEventListener("click", convertToF);
+  C.addEventListener("click", convertToC);
+  let mins = document.getElementsByClassName("min");
+  for (let a = 0; a < mins.length; a += 1) {
+    mins[a].innerHTML = `${Math.round(
+      (parseInt(mins[a].innerHTML) * 9) / 5 + 32
+    )}° `;
+  }
+  F.removeEventListener("click", convertToF);
+  C.addEventListener("click", convertToC);
 }
 
 function convertToC(event) {
@@ -93,6 +109,22 @@ function convertToC(event) {
   document.getElementById("temp").innerHTML = Math.round(tempInCelc);
   C.classList.remove("active");
   F.classList.add("active");
+  let maxs = document.getElementsByClassName("max");
+  for (let a = 0; a < maxs.length; a += 1) {
+    maxs[a].innerHTML = `${Math.round(
+      ((parseInt(maxs[a].innerHTML) - 32) * 5) / 9
+    )}° `;
+  }
+  F.removeEventListener("click", convertToF);
+  C.addEventListener("click", convertToC);
+  let mins = document.getElementsByClassName("min");
+  for (let a = 0; a < mins.length; a += 1) {
+    mins[a].innerHTML = `${Math.round(
+      ((parseInt(mins[a].innerHTML) - 32) * 5) / 9
+    )}° `;
+  }
+  C.removeEventListener("click", convertToC);
+  F.addEventListener("click", convertToF);
 }
 
 F.addEventListener("click", convertToF);
