@@ -40,9 +40,9 @@ p {
   border-radius: 20px;
   background-color: aliceblue;
   opacity: 1;
-  margin: 20px;
-  max-width: 1000px;
-  margin-bottom: 0;
+  margin: 10px auto;
+  max-width: 800px;
+  width: 80%;
 }
 
 #myVideo {
@@ -55,6 +55,7 @@ p {
 
 .city {
   font-size: 24px;
+  margin-top: 15px;
 }
 
 .date,
@@ -63,12 +64,14 @@ p {
 .wind,
 .C {
   font-size: 15px;
+  line-height: 12px;
 }
 
 .temp {
   font-size: 50px;
   font-weight: bold;
   line-height: 40px;
+  margin-bottom: 25px;
 }
 
 .location-button {
@@ -79,7 +82,13 @@ p {
   display: inline;
 }
 
-a {
-  margin-left: 30px;
-  margin-top: 0;
+.link {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+}
+
+#icon {
+  font-size: 45px;
+  margin-left: 10px;
 }

@@ -20,6 +20,7 @@ if (minutes > 9) {
 
 function showTemp(response) {
   temp.innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  document.getElementById("icon").className += "fa-solid fa-sun";
   descr.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind speed: ${response.data.wind.speed} m/s`;
