@@ -20,21 +20,41 @@ if (minutes > 9) {
 
 function showTemp(response) {
   temp.innerHTML = ` ${Math.round(response.data.main.temp)}`;
-  document.getElementById("icon").className += "fa-solid fa-sun";
   document.getElementById("C").innerHTML = descr.innerHTML = "°C";
   document.getElementById("|").innerHTML = descr.innerHTML = "|";
   document.getElementById("F").innerHTML = descr.innerHTML = "°F";
-  descr.innerHTML = response.data.weather[0].main;
+  descr.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind speed: ${Math.round(response.data.wind.speed)} m/s`;
+  document
+    .getElementById("icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .getElementById("icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 function showTempLoc(response) {
-  temp.innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  temp.innerHTML = `${Math.round(response.data.main.temp)}`;
+  document.getElementById("C").innerHTML = descr.innerHTML = "°C";
+  document.getElementById("|").innerHTML = descr.innerHTML = "|";
+  document.getElementById("F").innerHTML = descr.innerHTML = "°F";
   city.innerHTML = response.data.name;
-  descr.innerHTML = response.data.weather[0].main;
+  descr.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind speed: ${Math.round(response.data.wind.speed)} m/s`;
+  document
+    .getElementById("icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .getElementById("icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 const key = "6d7419b80173a006c3181ed3637d4936";

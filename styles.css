@@ -80,7 +80,11 @@ p {
 
 .up {
   position: relative;
-  bottom: 42%;
+  bottom: 24%;
+}
+
+.descr:first-letter {
+  text-transform: capitalize;
 }
 
 #icon {
